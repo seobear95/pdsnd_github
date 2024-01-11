@@ -36,21 +36,16 @@ DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sun
 
 """get_filters()
 사용자에게 도시, 월, 요일을 입력받아 분석할 데이터의 필터를 설정합니다.
-
 입력받은 값들은 소문자 또는 타이틀 케이스로 변환되어 올바른 형식으로 처리됩니다.
-
 잘못된 입력을 방지하기 위해 while 루프를 사용하여 사용자가 유효한 값을 입력할 때까지 반복 요청합니다.
+Asks user to specify a city, month, and day to analyze.
+Parameters: no 
+Returns:
+    (str) city - name of the city to analyze
+    (str) month - name of the month to filter by, or "all" to apply no month filter
+    (str) day - name of the day of week to filter by, or "all" to apply no day filter
 """
-
 def get_filters():
-    """
-    Asks user to specify a city, month, and day to analyze.
-
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input("Please choose a city >>> (Chicago, New York City or Washington): ").lower()
@@ -73,7 +68,7 @@ def get_filters():
         print("Please try again, day not recognized")
         day = input("Please choose a day >>> (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or All): ").title()
 
-    print('-'*40)
+    print('===='*10)
     return city, month, day
 
 """데이터 로딩 및 전처리
