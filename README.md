@@ -13,4 +13,5 @@ git & github project
 bikeshare.py
 
 ### Credits
-https://github.com/seobear95/pdsnd_github.git
+### https://github.com/seobear95/pdsnd_github.git
+https://github.com/pdsnd_github
